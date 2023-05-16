@@ -30,7 +30,7 @@ function App() {
       <ImagesUpload
         className="images-preview"
         onChange={onDrop}
-        imgExtension={['.jpg', '.png', '.gif']}
+        imgExtension={['.jpg', '.png', '.gif', '.jpeg']}
         maxFileSize={5242880}
         withPreview
       />
