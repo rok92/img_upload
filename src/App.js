@@ -5,6 +5,8 @@ import axios from 'axios';
 
 function App() {
 
+  const dbUrl = process.env.REACT_APP_DB_CONNECT;
+
   const [images, setImages] = useState([]);
 
   const onDrop = (files) => {
@@ -28,7 +30,7 @@ function App() {
 
     
     try {
-      const response = await axios.post(process.env.REACT_APP_DB_CONNECT, formData, {
+      const response = await axios.post(dbUrl, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
