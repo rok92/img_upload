@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState } from 'react';
-import Dropzone from 'react-dropzone';
 import ImagesUpload from 'react-images-upload';
 import axios from 'axios';
 
@@ -52,12 +51,12 @@ function App() {
       <div className="image-list">
         {images.map((image, index) => (
           <div key={index} className="image-item">
-            <img src={URL.createObjectURL(image)} alt="uploaded" />
+            {/* <img src={URL.createObjectURL(image)} alt="uploaded" /> */}
             <button onClick={() => removeImage(index)}>Remove</button>
           </div>
         ))}
       </div>
-        <button onClick={uploadImage}>Upload</button>
+      <button onClick={uploadImage}>Upload</button>
     </div>
   );
 }
