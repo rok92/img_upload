@@ -26,7 +26,7 @@ function App() {
     }
 
     try {
-      const response = await axios.post('https://zesty-kelpie-490763.netlify.app/upload', formData, {
+      const response = await axios.post('zesty-kelpie-490763.netlify.app/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
