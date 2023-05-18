@@ -60,6 +60,6 @@ app.post('/upload', (req, res) => {
 connection.connect()
 
 // 서버 시작
-app.listen(3005, () => {
-    console.log('Server is running on port 3005');
-});
+app.listen(process.env.PORT || 80, () => {
+    console.log('Server is running on port 80');
+  });
