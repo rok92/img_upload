@@ -4,6 +4,7 @@ import ImagesUpload from 'react-images-upload';
 import axios from 'axios';
 
 function App() {
+
   const [images, setImages] = useState([]);
 
   const onDrop = (files) => {
@@ -25,8 +26,9 @@ function App() {
       formData.append('images', images[i]);
     }
 
+    
     try {
-      const response = await axios.post('http://localhost:3005/upload', formData, {
+      const response = await axios.post(process.env.REACT_APP_DB_CONNECT, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
