@@ -6,9 +6,7 @@ const cors = require('cors'); // CORS 미들웨어 추가
 
 const app = express();
 
-app.use(cors({
-    origin: 'https://zesty-kelpie-490763.netlify.app',
-})); // 모든 요청에 대해 CORS 허용
+app.use(cors()); // 모든 요청에 대해 CORS 허용
 
 
 // MySQL 데이터베이스 연결 설정
