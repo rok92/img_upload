@@ -6,7 +6,9 @@ const cors = require('cors'); // CORS 미들웨어 추가
 
 const app = express();
 
-app.use(cors()); // 모든 요청에 대해 CORS 허용
+app.use(cors({
+    origin: 'https://zesty-kelpie-490763.netlify.app',
+})); // 모든 요청에 대해 CORS 허용
 
 
 // MySQL 데이터베이스 연결 설정
@@ -60,6 +62,6 @@ app.post('/upload', (req, res) => {
 connection.connect()
 
 // 서버 시작
-app.listen(process.env.PORT || 80, () => {
+app.listen(80, () => {
     console.log('Server is running on port 80');
   });
