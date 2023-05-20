@@ -30,6 +30,7 @@ function App() {
 
     
     try {
+      console.log('jere');
       const response = await axios.post(dbUrl, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
